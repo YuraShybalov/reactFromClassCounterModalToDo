@@ -13,6 +13,7 @@ class Counter extends Component {
     this.setState(prevState => ({ value: prevState.value - 1 }));
 
   render() {
+    // console.log(`this.state:>>`, this.state);
     return (
       <div>
         <div className={css.counter}>

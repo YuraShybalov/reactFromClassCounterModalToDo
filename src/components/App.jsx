@@ -1,9 +1,21 @@
+import { Component } from 'react';
 import Counter from './Counter/Counter';
+import Header from './Header/Header';
 
-export const App = () => {
-  return (
-    <div>
-      <Counter />
-    </div>
-  );
-};
+import React from 'react';
+
+class App extends Component {
+  state = {
+    modalOpen: false,
+  };
+  render() {
+    return (
+      <div>
+        <Header />
+        <Counter />
+      </div>
+    );
+  }
+}
+
+export default App;
