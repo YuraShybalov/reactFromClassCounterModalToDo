@@ -2,11 +2,11 @@ import React from 'react';
 
 import css from './Header.module.css';
 
-const Header = () => {
+const Header = ({ showModal }) => {
   return (
     <header className={css.headerWraper}>
       <p>Navbar</p>
-      <button>Open Modal</button>
+      <button onClick={showModal}>Open Modal</button>
     </header>
   );
 };
