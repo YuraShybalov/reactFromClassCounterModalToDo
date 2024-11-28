@@ -7,25 +7,19 @@ import Modal from './Modal/Modal';
 
 class App extends Component {
   state = {
-    isShowModal: false,
+    isOpen: false,
   };
 
-  showModal = () => {
-    this.setState({ isShowModal: true });
-  };
-
-  closeModal = () => {
-    this.setState({ isShowModal: false });
+  toggle = () => {
+    this.setState(state => ({ isOpen: !state.isOpen }));
   };
 
   render() {
     return (
       <div>
-        <Header showModal={this.showModal} />
+        <Header showModal={this.toggle} />
         <Counter />
-        {this.state.isShowModal && (
-          <Modal closeModal={this.closeModal}>Some</Modal>
-        )}
+        {this.state.isOpen && <Modal closeModal={this.toggle}>Some</Modal>}
       </div>
     );
   }
