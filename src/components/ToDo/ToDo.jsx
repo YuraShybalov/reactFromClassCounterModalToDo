@@ -1,11 +1,16 @@
 import React from 'react';
 
-const ToDo = ({ todo }) => {
+const ToDo = ({ todo, handleCheckCompleted }) => {
   return (
     <li className="list-group-item">
       <div className="row jastify-content-between">
         <div className="col-10">
-          <input className="form-check-input me-2" type="checkbox" />
+          <input
+            className="form-check-input me-2"
+            type="checkbox"
+            checked={todo.completed}
+            onChange={() => handleCheckCompleted(todo.id)}
+          />
           {todo.title}
         </div>
         <div className="col">
