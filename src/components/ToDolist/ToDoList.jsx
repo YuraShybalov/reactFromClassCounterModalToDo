@@ -17,12 +17,12 @@ class ToDoList extends Component {
     });
   };
 
-  hendleDelete = (id) => {
-    this.setState prevState => {
-        return{
-            todoList:prevState.todoList.filter(todo=> todo.id !== id)
-        }
-    }
+  hendleDelete = id => {
+    this.setState = prevState => {
+      return {
+        todoList: prevState.todoList.filter(todo => todo.id !== id),
+      };
+    };
   };
 
   render() {
